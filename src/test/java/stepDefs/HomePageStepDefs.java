@@ -13,8 +13,8 @@ public class HomePageStepDefs {
         homePage.openWebSite();
     }
 
-    @When("I search for {string}")
-    public void searchRequest(String request) throws InterruptedException {
+    @When("^I search for ([^\"]*)$")
+    public void searchRequest(String request) {
         homePage.searchRequest(request);
     }
 

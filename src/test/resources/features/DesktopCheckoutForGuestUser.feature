@@ -7,7 +7,7 @@ Feature: Desktop Checkout for Guest User
   Scenario: Proceed to checkout, final review and place order as guest user
 
     Given I open the Initial home page
-    When I search for "Thinking in Java"
+    When I search for 'Thinking in Java'
     Then I am redirected to a Search page
     And Search results contain the following products
       | Thinking in Java       |
@@ -23,14 +23,14 @@ Feature: Desktop Checkout for Guest User
       | Think Java                                                            |
       | Thinking Recursively with Java                                        |
       | Java and Algorithmic Thinking for the Complete Beginner (2nd Edition) |
-    When I click 'Add to basket' button for product with name "Thinking in Java"
+    When I click 'Add to basket' button for product with name 'Thinking in Java'
     And I select 'Basket Checkout' in basket pop-up
     Then I am redirected to a Basket page
     And Basket order summary is as following:
       | Delivery cost | Total    |
       | FREE          | 105,90 € |
     When I click 'Checkout' button on Basket page
-    And I checkout as a new customer with email "test@user.com"
+    And I checkout as a new customer with email 'test@user.com'
     Then Checkout order summary is as following:
       | Sub-total | Delivery | VAT    | Total    |
       | 105,90 €  | FREE     | 0,00 € | 105,90 € |

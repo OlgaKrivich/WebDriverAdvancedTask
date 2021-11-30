@@ -21,7 +21,7 @@ public class SearchPageStepDefs {
         searchPage.getSearchFilterFragment().clickSubmitButton();
     }
 
-    @When("I click 'Add to basket' button for product with name {string}")
+    @When("^I click 'Add to basket' button for product with name '([\\w ]+)'$")
     public void clickAddToBasketButton(String expectedProductName) {
         searchPage.getBookItemFragment().clickAddToBasketButton(expectedProductName);
     }

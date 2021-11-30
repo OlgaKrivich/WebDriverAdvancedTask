@@ -43,7 +43,7 @@ public class PaymentStepDefs {
         );
     }
 
-    @When("I checkout as a new customer with email {string}")
+    @When("^I checkout as a new customer with email '([\\w ]{1,}+@[\\w ]{1,}\\.[\\w ]{1,})'$")
     public void checkoutAsNewCustomer(String email) {
         paymentPage.getNewCustomerFragment().enterEmailCustomer(email);
     }
