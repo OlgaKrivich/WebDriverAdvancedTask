@@ -16,7 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 public class SearchPage extends AbstractPage {
 
     public static final String PAGE_URL = BASE_URL + "/search";
-    public static final String TITLE = "Results for Thinking in Java | Book Depository";
+    public static final String TITLE = "Results for 'Thinking in Java' | Book Depository";
 
     BookItemFragment bookItemFragment = new BookItemFragment(SingletonDriver.getDriver());
     SearchResultsFragment searchResultsFragment = new SearchResultsFragment(

@@ -16,24 +16,24 @@ Feature: Desktop Checkout for Guest User
     When I apply the following search filters
       | Price range  | 30 € +         |
       | Availability | In Stock (6)   |
-      | Language     | English (16)   |
-      | Format       | Paperback (21) |
+      | Language     | English (17)   |
+      | Format       | Paperback (22) |
     Then Search results contain only the following products
       | Thinking in Java                                                      |
       | Think Java                                                            |
       | Thinking Recursively with Java                                        |
-      | Java and Algorithmic Thinking for the Complete Beginner (2nd Edition) |
+      | Think Data Structures |
     When I click 'Add to basket' button for product with name 'Thinking in Java'
     And I select 'Basket Checkout' in basket pop-up
     Then I am redirected to a Basket page
     And Basket order summary is as following:
       | Delivery cost | Total    |
-      | FREE          | 105,90 € |
+      | FREE          | 90,74 € |
     When I click 'Checkout' button on Basket page
     And I checkout as a new customer with email 'test@user.com'
     Then Checkout order summary is as following:
       | Sub-total | Delivery | VAT    | Total    |
-      | 105,90 €  | FREE     | 0,00 € | 105,90 € |
+      | 90,74 €  | FREE     | 0,00 € | 90,74 € |
     When I fill delivery address information manually:
       | Full name | Delivery country | Address line 1   | Address line 2   | Town/City | County/State | Postcode |
       | John      | Ukraine          | Random address 1 | Random address 2 | Kyiv      | Random State | 12345    |
