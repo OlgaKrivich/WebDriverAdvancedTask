@@ -28,12 +28,12 @@ Feature: Desktop Checkout for Guest User
     Then I am redirected to a Basket page
     And Basket order summary is as following:
       | Delivery cost | Total    |
-      | FREE          | 90,74 € |
+      | FREE          | 105,91 € |
     When I click 'Checkout' button on Basket page
     And I checkout as a new customer with email 'test@user.com'
     Then Checkout order summary is as following:
       | Sub-total | Delivery | VAT    | Total    |
-      | 90,74 €  | FREE     | 0,00 € | 90,74 € |
+      | 105,91 €  | FREE     | 0,00 € | 105,91 € |
     When I fill delivery address information manually:
       | Full name | Delivery country | Address line 1   | Address line 2   | Town/City | County/State | Postcode |
       | John      | Ukraine          | Random address 1 | Random address 2 | Kyiv      | Random State | 12345    |

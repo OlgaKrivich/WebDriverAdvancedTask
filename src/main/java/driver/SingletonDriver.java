@@ -13,25 +13,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class SingletonDriver {
 
-
     private static WebDriver driver;
 
     private SingletonDriver() {
     }
 
-//    public static WebDriver getDriver() {
-//        if (instance == null) {
-//            WebDriverManager.chromedriver().setup();
-//            instance = new ChromeDriver(getChromeOptions());
-//            instance.manage().window().maximize();
-//            instance.manage().timeouts().implicitlyWait(IMPLICITLY_WAIT_TIMEOUT, TimeUnit.SECONDS);
-//        }
-//        return instance;
-//    }
-
     public static synchronized WebDriver getDriver() {
         String driverName = System.getProperty("driver");
-        if (driverName != null) {
+        if (driver== null) {
             if ("fireFox".equals(driverName)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();

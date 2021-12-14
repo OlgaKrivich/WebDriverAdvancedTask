@@ -1,30 +1,20 @@
 package hooks;
 
-import static driver.SingletonDriver.getDriver;
-
 import driver.SingletonDriver;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import io.cucumber.java.Before;
+import org.junit.After;
 
 public class DriverHooks {
 
-    private DriverHooks() {
+
+    @After
+    public void tearDown() {
+        if (SingletonDriver.getDriver() != null) {
+            SingletonDriver.getDriver().quit();
+        }
     }
 
-    @BeforeAll
-    public static void setUpDriver() {
-        getDriver();
-    }
-
-    @AfterAll
-    public static void quitDriver() {
-        quit();
-    }
-
-    public static void quit() {
-        SingletonDriver.getDriver().quit();
-    }
-
+    @Before
     public static void clearCookies() {
         SingletonDriver.getDriver().manage().deleteAllCookies();
     }

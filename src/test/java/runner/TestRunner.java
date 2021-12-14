@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         glue = "stepDefs",
         plugin = {"json:target/cucumber-reports/Cucumber.json"},
-        tags = "@Runme"
+        tags = "@Regression"
 )
 
 public class TestRunner {
