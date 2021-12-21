@@ -19,10 +19,10 @@ Feature: Desktop Checkout for Guest User
       | Language     | English (17)   |
       | Format       | Paperback (22) |
     Then Search results contain only the following products
-      | Thinking in Java                                                      |
-      | Think Java                                                            |
-      | Thinking Recursively with Java                                        |
-      | Think Data Structures |
+      | Thinking in Java               |
+      | Think Java                     |
+      | Thinking Recursively with Java |
+      | Think Data Structures          |
     When I click 'Add to basket' button for product with name 'Thinking in Java'
     And I select 'Basket Checkout' in basket pop-up
     Then I am redirected to a Basket page
@@ -39,9 +39,9 @@ Feature: Desktop Checkout for Guest User
       | John      | Ukraine          | Random address 1 | Random address 2 | Kyiv      | Random State | 12345    |
     Then There is no validation error messages displayed on 'Delivery Address' form
     When I enter my card details
-      | Card Number | 4111111111111111 |
-      | Expiry Year | 2022 |
-      | Expiry Month | 03 |
-      | Cvv | 123 |
+      | Card Number  | 4111111111111111 |
+      | Expiry Year  | 2022             |
+      | Expiry Month | 03               |
+      | Cvv          | 123              |
 
 
