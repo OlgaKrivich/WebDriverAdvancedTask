@@ -17,7 +17,7 @@ public class SearchPageStepDefs {
     @When("I apply the following search filters")
     public void applySearchFilter(DataTable table) {
         searchPage.getSearchFilterFragment().selectOption(table);
-        searchPage.getChristmasPopUp().clickCloseIcon();
+       // searchPage.getChristmasPopUp().clickCloseIcon();
         searchPage.getSearchFilterFragment().clickSubmitButton();
     }
 
